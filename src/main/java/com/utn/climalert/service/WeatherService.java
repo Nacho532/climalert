@@ -34,7 +34,7 @@ public class WeatherService {
         weatherRepository.findLast().ifPresentOrElse(clima -> {
             if (clima.getTemperature() > 35.0 && clima.getHumidity() > 60) {
                 System.out.println("ALERTA T: " + clima.getTemperature() + "°C, H: " + clima.getHumidity() + "%");
-                notificarEmail.enviarAlerta(clima);//TODO
+                notificarEmail.enviarAlerta(clima);
             } else {
                 System.out.println("Clima normal. T: " + clima.getTemperature() + "°C, H: " + clima.getHumidity() + "%");
             }

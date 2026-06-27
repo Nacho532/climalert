@@ -17,7 +17,7 @@ public class WeatherScheduler {
         this.weatherService = weatherService;
     }
 
-    @Scheduled(cron = "0 */5 * * * *")
+    @Scheduled(cron = "0 * * * * *")
     public void buscarClima() {
         System.out.println("--- Buscando Clima ---");
         CurrentWeather clima = weatherApiClient.getCurrentWeather();

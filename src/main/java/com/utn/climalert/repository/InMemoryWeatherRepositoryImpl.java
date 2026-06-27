@@ -16,7 +16,7 @@ public class InMemoryWeatherRepositoryImpl implements WeatherRepository{
     @Override
     public WeatherRecord save(WeatherRecord record) {
         if (record.getId() == null){
-            record.setId(secuenciaId);
+            record.setId(secuenciaId++);
             dbWeather.add(record);
             return record;
         }
