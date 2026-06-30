@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 public class WeatherApiClient {
     public CurrentWeather getCurrentWeather() {
         RestTemplate restTemplate = new RestTemplate();
-        String apiKey = "0c53280c80104377833162055262306";
+        String apiKey = "";
         String location = "CABA";
         String url = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + location;
 
